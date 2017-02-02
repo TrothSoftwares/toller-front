@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('dashboard',{path:'/'}, function() {
+    this.route('ringscheduler');
+  });
 });
 
 export default Router;
